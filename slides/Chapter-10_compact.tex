@@ -1,0 +1,30 @@
+\documentclass[compress,trans,9pt]{beamer}
+%\documentclass[compress,9pt,usenames,dvipsnames]{beamer}
+% \usepackage[utf8]{inputenc}
+% \includeonlyframes{current}
+\input{Common}
+\input{Title}
+\begin{document}
+\begin{frame}[noframenumbering]
+  \titlepage
+\end{frame}
+\newcommand{\myChapter}{Chapter 10. Binomial Option Pricing: Basic Concepts}
+\newcommand{\mySection}[1]{
+  \section{\S\: #1}
+  \begin{frame}{\myChapter}\tableofcontents\end{frame}
+  \begin{frame}{\myChapter}\tableofcontents[currentsection]\end{frame}
+  }
+\begin{frame}
+\begin{center}
+\huge
+\myChapter
+\end{center}
+\end{frame}
+\include{Section_10-1}
+\include{Section_10-2}
+\include{Section_10-3}
+\include{Section_10-4}
+\include{Section_10-5}
+\include{Section_10-6}
+\include{Section_10-7}
+\end{document}

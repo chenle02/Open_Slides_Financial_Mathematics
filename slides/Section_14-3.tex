@@ -1,0 +1,61 @@
+\def\mySecNum{14.3}
+\mySection{\mySecNum~Barrier options}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\begin{center}
+		The \textcolor{magenta}{barrier option} has the payoff            \\
+		that depends on whether over the option life the underlying price \\
+		reaches a specified level.
+	\end{center}
+	\vfill
+	\pause
+	\begin{itemize}
+		\item Path-dependent
+			\bigskip
+		\item Since barrier puts and calls never pay more than standard puts and calls, they are no more expensive than standard puts and calls
+			\bigskip
+		\item Widely used in practice
+	\end{itemize}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Types of Barrier Options}
+\begin{enumerate}
+	\item {\bf Knock-out options}: Go out of existence
+	\item[] \textcolor{cyan}{down}-and-out: if the asset price \textcolor{cyan}{falls} to reach the barrier
+	\item[] \textcolor{magenta}{up}-and-out: if the asset price \textcolor{magenta}{rises} to reach the barrier
+		\bigskip
+
+	\item {\bf Knock-in options}: Come into existence
+	\item[] \textcolor{cyan}{down}-and-in: if the asset price \textcolor{cyan}{falls} to reach the barrier
+	\item[] \textcolor{magenta}{up}-and-in: if the asset price \textcolor{magenta}{rises} to reach the barrier
+		\bigskip
+
+	\item {\bf Rebate options}: make a fixed payment if the asset price reaches the barrier
+	\item[] \textcolor{cyan}{down} rebates: if the asset price \textcolor{cyan}{falls} to reach the barrier
+	\item[] \textcolor{magenta}{up} rebates: if the asset price \textcolor{magenta}{rises} to reach the barrier
+\end{enumerate}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\begin{align*}
+		\underbrace{\{\text{down},\text{up}\}}_{\text{Knock}}  \times \{\text{in},\text{out}\} \times \{\text{call},\text{put}\}
+	\end{align*}
+	\bigskip
+	\mySeparateLine
+	\begin{align*}
+		\text{Knock-in option} + \text{Knock-out option} = \text{Normal option}
+	\end{align*}
+	\mySeparateLine
+	\bigskip
+	\begin{align*}
+		\text{Down-and-in call} + \text{Down-and-out call} & = \text{Standard call} \\
+		\text{Down-and-in put} + \text{Down-and-out put}   & = \text{Standard put}  \\
+                                                       & \bigskip               \\
+		\text{Up-and-in call} + \text{Up-and-out call}     & = \text{Standard call} \\
+		\text{Up-and-in put} + \text{Up-and-out put}       & = \text{Standard put}  \\
+	\end{align*}
+\end{frame}
+%-------------- end slide -------------------------------%}}}

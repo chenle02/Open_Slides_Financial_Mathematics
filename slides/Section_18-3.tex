@@ -1,0 +1,75 @@
+\def\mySecNum{18.3}
+\mySection{\mySecNum~A lognormal model of stock prices}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\begin{itemize}
+		\item Let $R(t,s)$ be the continuously compounded return from time $t$ to a later time $s$.
+		\item For $ t_0<t_1<t_2$, $R(\cdot,\cdot)$ has to satisfy the additivity property:
+			\begin{equation*}
+				R(t_0,t_2) = R(t_0,t_1) + R(t_1,t_2)
+			\end{equation*}
+			\bigskip
+		\item For time interval $[0,T]$ divided into $n$ subintervals of equal length $T/n$, we have
+			\begin{equation*}
+				R(0,T) = R(0,h) + R(h,2h) + \cdots + R((n-1)h,T)
+			\end{equation*}
+		\item[] Assume that
+			\begin{equation*}
+				\E\left(R((i-1)h,ih)\right)   = \alpha_h \quad \text{and} \quad
+				\Var\left(R((i-1)h,ih)\right) = \sigma_h^2
+			\end{equation*}
+		\item[] Then
+			\begin{equation*}
+				\E\left(R(0,T)\right)   = n\alpha_h \quad \text{and} \quad
+				\Var\left(R(0,T)\right) = n\sigma_h^2
+			\end{equation*}
+			\mySeparateLine
+			\bigskip
+		\item By central limit limit theorem, as $n\to\infty$, one can assume that
+			\begin{equation*}
+				R(0,T)\sim N
+			\end{equation*}
+	\end{itemize}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile]
+\begin{equation*}
+	\ln(S_t / S_0) \sim N\left([\alpha-\delta-0.5\sigma^2]t, \sigma^2 t\right)
+\end{equation*}
+\bigskip
+
+\begin{equation*}
+	\ln(S_t / S_0) = [\alpha-\delta-0.5\sigma^2]t+ \sigma \sqrt{t}\: Z
+\end{equation*}
+\bigskip
+
+\begin{equation*}
+	S_t= S_0 e^{[\alpha-\delta-0.5\sigma^2]t} e^{\sigma \sqrt{t} \: Z}
+\end{equation*}
+\bigskip
+
+\mySeparateLine
+\bigskip
+
+\begin{equation*}
+	\E[S_t]                   = S_0 e^{[\alpha-\delta]t} \quad \text{and} \quad
+	\text{Median stock price} = e^{[\alpha-\delta-0.5\sigma^2]t}
+\end{equation*}
+
+\begin{equation*}
+	\text{One standard deviation}
+	\begin{cases}
+		\text{move up} = e^{[\alpha-\delta-0.5\sigma^2]t \textcolor{magenta}{+} \sigma \sqrt{t} \times 1}  \\[1em]
+		\text{move down} = e^{[\alpha-\delta-0.5\sigma^2]t \textcolor{cyan}{-} \sigma \sqrt{t} \times 1}
+	\end{cases}
+\end{equation*}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile]
+	\begin{center}
+		Go over examples 18.4 and 18.5 on textbook on p. 555.
+	\end{center}
+\end{frame}
+%-------------- end slide -------------------------------%}}}

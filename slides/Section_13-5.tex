@@ -1,0 +1,49 @@
+\def\mySecNum{13.5}
+\mySection{\mySecNum~The Black-Scholes analysis}
+%-------------- start slide -------------------------------%{{{ 1 BS equation
+\begin{frame}[fragile,t]
+ From the previous section we see that
+  \begin{gather*}
+    \text{Market-maker's profit}
+    =-\left(\frac{1}{2}\sigma^2 S_t^2 \Gamma_t + \theta_t + r \left[ \Delta_t S_t -C(S_t)\right]\right)h
+   \end{gather*}
+   \bigskip
+
+   If one believes that via one-standard deviation move, the market-maker's profit is approximately zero, we arrive at the \textcolor{magenta}{Black-Scholes equation:}
+
+   \bigskip
+   \begin{align*}
+      \boxed{\frac{1}{2}\sigma^2 S_t^2 \Gamma_t + \theta_t + r \Delta_t S_t  = r C(S_t)}
+   \end{align*}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1 PDF form
+\begin{frame}[fragile,t]
+  Equivalently, this can be written as a standard PDE:
+  \begin{align*}
+    \mathcal{L}_{\text{BS}} V(t,S) = 0
+  \end{align*}
+  where $V(t,S)$ refers to option (call or put) price and
+  \begin{align*}
+    \mathcal{L}_{\text{BS}} =
+    \frac{\partial }{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 }{\partial S^2}
+    + r\: S \frac{\partial}{\partial S} V(t,S) -r.
+  \end{align*}
+
+  \bigskip
+
+  One still needs to put the correct boundary conditions.
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1 Assumptions
+\begin{frame}[fragile,t]
+  \begin{itemize}
+    \item Under the following assumptions:
+    \item[] Underlying asset and the option do not pay dividends
+    \item[] Interest rate and volatility are constant
+    \item[] The stock does not make large discrete moves
+      \bigskip
+    \item The equation is valid only when early exercise is not optimal
+  \end{itemize}
+\end{frame}
+%-------------- end slide -------------------------------%}}}

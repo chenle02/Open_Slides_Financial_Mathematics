@@ -1,0 +1,179 @@
+\def\mySecNum{18.1}
+\mySection{\mySecNum~The normal distribution}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	 \begin{mydefinition}
+		 A random variable $X$ is said to have the \textcolor{magenta}{\it normal distribution} (or
+		 \textcolor{magenta}{\it normally distributed}) with mean $\mu$ and variance $\sigma^2$, if the
+		 probability density function (pdf) is given by
+		 \begin{align*}
+			 f_X(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}.
+		 \end{align*}
+		 We write
+		 \begin{align*}
+			 X\sim N(\mu,\sigma^2).
+		 \end{align*}
+		 $N(0,1)$ is called the \textcolor{magenta}{\it standard normal distribution}.
+	 \end{mydefinition}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\begin{mydefinition}
+		The \textcolor{magenta}{\it cumulative distribution function (cdf) of the standard normal distribution} is denoted by
+		$\Phi(\cdot)$, namely,
+	\begin{align*}
+		\Phi(x) = \int_{-\infty}^x \frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2}y^2} dy.
+	\end{align*}
+	\end{mydefinition}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	Let $Z\sim N(0,1)$ and $a>0$. By symmetry of the density, we have the following useful formulas:
+	\vfill
+\begin{enumerate}
+	\item
+		\begin{align*}
+			\bbP\left(-a \le Z\le a\right) & =2 \Phi(a) -1.
+		\end{align*}
+	\item[] For example,
+		\begin{align*}
+			\bbP\left(|Z|\le 0.3\right) = 2\cdot\Phi(0.3) -1 = 2\times 0.6179-1=0.2358.
+		\end{align*}
+		\bigskip
+	\item
+		\begin{align*}
+			\bbP\left(Z>a\right) = \bbP(Z<-a) = \Phi(-a) = 1-\Phi(a)
+		\end{align*}
+		\bigskip
+	\item
+		\begin{align*}
+			\bbP\left(0<Z\le a\right) = \bbP(Z<a) - \bbP(Z\le 0) = \Phi(a)-\frac{1}{2}.
+		\end{align*}
+\end{enumerate}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Standardization}
+	\begin{center}
+			\begin{align*}
+				X\sim N\left(\mu,\sigma^2\right) \quad \Longleftrightarrow \quad
+				Z = \frac{X-\mu}{\sigma} \sim N(0,1)
+			\end{align*}
+			\bigskip
+
+			or equivalently
+			\bigskip
+
+			\begin{align*}
+				Z\sim N\left(0,1\right) \quad \Longleftrightarrow \quad
+				X=\mu + \sigma Z \sim N(\mu,\sigma^2)
+			\end{align*}
+	\end{center}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{myexample}
+	Assume the lifetime of a brand of light bulb follows a normal distribution with mean of $4$ years
+	and standard deviation of  $0.4$ years. What is the probability that it stop working before  $5$
+	years.
+\end{myexample}
+\pause
+\bigskip
+\begin{mysol}
+	Let $X$ be the lifetime of the light bulb. Then
+	\begin{align*}
+		X\sim N\left(4,0.4^2\right) \quad \Longrightarrow \quad \bbP(X\le 5) & = \bbP\left(\frac{X-4}{0.4}\le 2.5 \right) \\
+                                                                         & = \Phi(2.5)                                \\
+                                                                         & = 0.99379.
+	\end{align*}
+	\myEnd
+\end{mysol}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Sums of normal random variables}
+
+Suppose we have $n$ jointly distributed random variables $X_i$, $i=1,\dots,n$, with mean and
+variance $\E(X_i ) = \mu_i$, $\Var(X_i) =\sigma_i^2$, and covariance $\Cov(X_i,X_j) = \sigma_{ij}$.
+\bigskip
+
+\begin{remark}
+	\begin{enumerate}
+		\item The covariance between two random variables measures their tendency to move together.
+		\item $\Var(X_i) = \Cov(X_i,X_i)$.
+		\item Let $\rho_{ij}$ be the \textcolor{magenta}{\it correlation coefficient} of $X_i$ and
+			$X_j$, namely,
+			\begin{align*}
+				\rho_{ij} := \frac{\sigma_{ij}}{\sigma_i \sigma_j}.
+			\end{align*}
+		\item[] Hence, $\sigma_{ij}=\rho_{ij}\sigma_i\sigma_j$.
+	\end{enumerate}
+\end{remark}
+
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{mythm}
+	The weighted random variable $\sum_{i=1}^{n} a_i X_i$ have the following mean and variance:
+	\begin{align*}
+		\E\left(\sum_{i=1}^{n} a_i X_i\right)   & = \sum_{i=1}^{n} a_i \mu_i, \\
+		\Var\left(\sum_{i=1}^{n} a_i X_i\right) & = \sum_{i=1}^{n} \sum_{j=1}^{n} a_i a_j \sigma_{ij}.
+	\end{align*}
+\end{mythm}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{mythm}
+	If $X_i\sim N\left(\mu_i,\sigma_i^2\right)$, then
+	\begin{align*}
+		\sum_{i=1}^{n} a_i X_i \sim N\left(\sum_{i=1}^{n} a_i \mu_i, \sum_{i=1}^{n} \sum_{j=1}^{n} a_i a_j
+		\sigma_{ij}\right)
+	\end{align*}
+\end{mythm}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{myexample}
+	If $X_1\sim N(\mu_1,\sigma_1^2)$ and $X_2\sim N(\mu_2,\sigma_2^2)$, give the distribution of $a X_1
+	+ b X_2$.
+\end{myexample}
+\bigskip
+\pause
+\begin{mysol}
+	\begin{align*}
+		a X_1 + b X_2 \sim N\left(a \mu_1+b\mu_2,a^2 \sigma_1^2+b^2 \sigma_2^2 + 2ab\: \sigma_{12}\right).
+	\end{align*}
+	\myEnd
+\end{mysol}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Central Limit Theorem}
+
+	Measurements lead to error. The error tends to be independent and is usually modeled by zero mean
+	normal random variables thanks to the central limit theorem (CLT).  \bigskip \pause
+
+	CLT usually can be phrased under different conditions. Here is one example: \pause
+
+	\begin{mythm}[(Linderberg-L\'evy CLT)]
+		Suppose $ \{X_1,\cdots, X_n\} $ is a sequence of independent random variables having the same
+		distribution (i.e., i.i.d.) with $\E(X_i)=\mu$ and  $\Var(X_i)=\sigma^2<\infty$. Then
+	  \begin{align*}
+		  \frac{\sqrt{n}(\overline{X}_n-\mu)}{\sigma} \stackrel{d}{\to} N(0,1), \qquad \text{as $n\to\infty$},
+		\end{align*}
+		where
+		\begin{align*}
+			\overline{X}_n = \frac{X_1+\cdots + X_n}{n}.
+		\end{align*}
+\end{mythm}
+\end{frame}
+%-------------- end slide -------------------------------%}}}

@@ -1,0 +1,8 @@
+Name,Abbreviation,Value
+Stock Spot Price,S,100
+Strike Price,K,95
+Interest Rate,r,0.08
+Dividend Yield,delta,0.05
+Volatility,sigma,0.30
+Expiration Time,T,1
+Number of Period,n,8

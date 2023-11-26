@@ -1,0 +1,27 @@
+\def\mySecNum{5.1}
+\mySection{\mySecNum~Alternative ways to buy a stock}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+Four different payment and receipt timing combinations
+\begin{enumerate}
+	\item \textcolor{magenta}{Outright purchase}: ordinary transaction
+	\item \textcolor{magenta}{Fully leveraged purchase}: investor borrows the full amount
+	\item \textcolor{magenta}{Prepaid forward contract}: pay today, receive the share later
+	\item \textcolor{magenta}{Forward contract}: agree on price now, pay/receive later
+\end{enumerate}
+\bigskip
+\pause
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{|c|cc|c|}
+		\hline
+                              & Day $0$                                            & Day $T$                                            & Payment          \\ \hline
+		Outright purchase         & \textcolor{magenta}{pay}+\textcolor{cyan}{receive} & ---                                                & $S_0$            \\
+		 Fully leveraged purchase & \textcolor{cyan}{receive}                          & \textcolor{magenta}{pay}                           & $ S_0e^{rT}$     \\
+		 Prepaid forward contract & \textcolor{magenta}{pay}                           & \textcolor{cyan}{receive}                          & ?                \\
+		 Forward contract         & ---                                                & \textcolor{magenta}{pay}+\textcolor{cyan}{receive} & $?\times e^{rT}$ \\ \hline
+	\end{tabular}
+
+\end{center}
+\end{frame}
+%-------------- end slide -------------------------------%}}}

@@ -1,0 +1,28 @@
+\documentclass[9pt]{beamer}
+%\documentclass[compress,9pt,usenames,dvipsnames]{beamer}
+% \usepackage[utf8]{inputenc}
+% \includeonlyframes{current}
+\input{Common}
+\input{Title}
+\begin{document}
+\begin{frame}[noframenumbering]
+  \titlepage
+\end{frame}
+\newcommand{\myChapter}{Chapter 3. Insurance, Collars, and Other Strategies}
+\newcommand{\mySection}[1]{
+  \section{\S\: #1}
+  \begin{frame}{\myChapter}\tableofcontents\end{frame}
+  \begin{frame}{\myChapter}\tableofcontents[currentsection]\end{frame}
+  }
+\begin{frame}
+\begin{center}
+\huge
+\myChapter
+\end{center}
+\end{frame}
+\include{Section_3-1}
+\include{Section_3-2}
+\include{Section_3-3}
+\include{Section_3-4}
+\include{Section_3-5}
+\end{document}

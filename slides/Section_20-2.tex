@@ -1,0 +1,135 @@
+\def\mySecNum{20.2}
+\mySection{\mySecNum~Brownian motion}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{mydefinition}
+	A real-valued stochastic process $Z(t)$ is called a \textcolor{magenta}{Brownian motion} or \textcolor{magenta}{Wiener process} if
+	\begin{enumerate}
+		\item It starts at $0$:
+			 \begin{align*}
+				 Z(0)=0.
+			\end{align*}
+		\item  For $0\le s <t$, the increment $Z(t)-Z(s)$ is normally distributed with mean zero and
+			variance $t-s$:
+			\begin{align*}
+				Z(t)-Z(s)\sim N(0, t-s).
+			\end{align*}
+		\item Its increments are independent: if
+			\begin{align*}
+				0\le t_0 \le t_1 \le \cdots \le t_k,
+			\end{align*}
+			then
+			\begin{align*}
+				\bbP\left(Z(t_i)-Z(t_{i-1})\in H_i, \: 1\le i\le k\right)
+				= \prod_{i=1}^k \bbP\left(Z(t_i)-Z(t_{i-1})\in H_i\right).
+			\end{align*}
+	\end{enumerate}
+\end{mydefinition}
+\vfill
+\pause
+\begin{remark}
+	One can always construct a \textcolor{cyan}{continuous version} of the Brownian motion; from now
+	on, we always assume that Brownian motion is a continuous process.
+\end{remark}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\begin{mythm}[(Some properties of Brownian motion)]
+		\begin{enumerate}
+			\item $Z(t)$ is \textcolor{cyan}{nowhere differentiable}.
+			\item[] \textcolor{gray}{(Hence, $dZ(t)$ requires some special treatment.)}
+				\bigskip
+			\item $Z(t)$ satisfies the \textcolor{cyan}{scaling property}:
+			\item[]
+				\begin{center}
+					$\widetilde{Z}(t):=\frac{1}{\sqrt{c}} Z(ct)$ is also a B.M. for all $c>0$.
+				\end{center}
+
+			\item $Z(t)$ is a \textcolor{cyan}{martingale}, namely,
+				\begin{align*}
+					\E\left(Z(t+s)|Z(t)\right) = Z(t).
+				\end{align*}
+
+			\item For any $t>0$,  $Z(t)\sim N(0,t)$ and
+				\begin{align*}
+					\E(Z(t)Z(s)) = \min(t,s)	\quad \text{for all $t,s\ge 0$}.
+				\end{align*}
+
+			\item $Z(t)$ is \textcolor{cyan}{translation invariant}, namely,
+				\begin{center}
+					$\widetilde{Z}(t):=Z(t+t_0)-Z(t_0)$ is also a B.M. for all $t_0\ge 0$.
+				\end{center}
+		\end{enumerate}
+	\end{mythm}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{myproof}
+	Part (1) goes beyond this course. All the rest could be proved using our current knowledge.
+	\vfill
+
+	\myEnd
+\end{myproof}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Arithmetic Brownian motion}
+\begin{mydefinition}
+	Let $Z(t)$ be a B.M. Then the process $X(t)$ given by
+	 \begin{align*}
+		 dX(t) = \alpha dt+ \sigma d Z(t)
+	\end{align*}
+	is called an \textcolor{magenta}{arithmetic Brownian motion}. Equivalently, $X(t)$ can be written
+	in the following integral representation:
+\begin{align*}
+	X(t) = X(0) + \int_0^t \alpha ds + \int_0^t \sigma dZ(s).
+\end{align*}
+\end{mydefinition}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\begin{remark}
+		\begin{enumerate}
+			\item $X(t)$ is normally distributed:
+				 \begin{align*}
+					 X(t) = \sigma t + \sigma Z(t) \sim N\left(\sigma t, \sigma^2 t\right).
+				\end{align*}
+
+			\item $X(t)$ takes both positive and negative values almost surely.
+
+			\item $\alpha t$ is a drift term.
+		\end{enumerate}
+	\end{remark}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{The Ornstein-Uhlenbeck process}
+\begin{mydefinition}
+	Let $Z(t)$ be a B.M. Then the process $X(t)$ given by
+	 \begin{align*}
+		 dX(t) = \lambda \left(\alpha - X(t)\right) dt+ \sigma d Z(t)
+	\end{align*}
+	is called the \textcolor{magenta}{Ornstein-Uhlenbeck process}.
+\end{mydefinition}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{remark}
+	Equivalently, $X(t)$ can be written in the following integral representation:
+	\begin{align*}
+		X(t) = X(0) + \lambda \int_0^t \left(\alpha - X(s)\right) ds + \int_0^t \sigma dZ(s),
+	\end{align*}
+	which is an integral equation (unknown $X$ appears on both sides).
+\end{remark}
+\bigskip
+\begin{remark}
+	We have introduced \textcolor{magenta}{mean reversion} in the drift term.
+\end{remark}
+\end{frame}
+%-------------- end slide -------------------------------%}}}

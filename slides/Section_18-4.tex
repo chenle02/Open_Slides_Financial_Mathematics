@@ -1,0 +1,153 @@
+\def\mySecNum{18.4}
+\mySection{\mySecNum~Lognormal probability calculations}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\begin{mythm}
+	\begin{equation*}
+		\bbP\left(S_t<K\right) = N\left(-d_2\right) \qquad \text{with} \quad
+		d_2=\frac{\ln(S_0/K)+(\alpha-\delta\textcolor{cyan}{-}\frac{1}{2}\sigma^2)t}{\sigma \sqrt{t}}.
+	\end{equation*}
+	Or equivalently, $\bbP(S_t>K) = N(d_2)$.
+	\end{mythm}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{mythm}
+	The $(1-p)\times 100\%$	prediction interval for $S_t$ is $\left(S_t^L,S_t^U\right)$ with
+	\begin{align*}
+		S_t^L & = S_0 e^{\left(\alpha-\delta-\frac{1}{2}\sigma^2\right)t + \sigma \sqrt{t}\: N^{-1}\left(\textcolor{magenta}{p/2}\right)} \\
+		S_t^U & = S_0 e^{\left(\alpha-\delta-\frac{1}{2}\sigma^2\right)t + \sigma \sqrt{t}\: N^{-1}\left(\textcolor{cyan}{1- p/2}\right)}
+	\end{align*}
+\end{mythm}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{center}
+	Go over Examples 18.6 and 18.7 on P. 558-559.
+\end{center}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{mythm}
+	It holds that
+	\begin{align*}
+		\E\left(S_t|S_t<K\right) & = S_0 e^{(\alpha-\delta)t} \frac{N\left(\textcolor{cyan}{-}d_1\right)}{N\left(\textcolor{cyan}{-}d_2\right)} \\
+		\E\left(S_t|S_t>K\right) & = S_0 e^{(\alpha-\delta)t} \frac{N\left(\textcolor{magenta}{+}d_1\right)}{N\left(\textcolor{magenta}{+}d_2\right)}
+	\end{align*}
+	where recall that
+	\begin{equation*}
+		d_1=\frac{\ln(S_0/K)+(r-\delta\textcolor{magenta}{+}\frac{1}{2}\sigma^2)t}{\sigma \sqrt{t}} \quad \text{and} \quad
+		d_2=\frac{\ln(S_0/K)+(r-\delta\textcolor{cyan}{-}\frac{1}{2}\sigma^2)t}{\sigma \sqrt{t}}
+	\end{equation*}
+\end{mythm}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{myproof}
+Recall that
+\begin{align*}
+	\E\left(S_t|S_t<K\right) = \frac{\E(S_t 1_{\{S_t<K\} })}{\mathbb{P}(S_t<K)} = S_0 \frac{\E\left(S_t/S_0 1_{\{S_t /S_0<K /S_0\} }\right)}{N(-d_2)}.
+\end{align*}
+Because
+\begin{align*}
+	X:=\ln\left(\frac{S_t}{S_0}\right) \sim N\left((\alpha-\delta-\frac{\sigma^2}{2})t,\sigma^2 t\right)
+\end{align*}
+we see that
+\begin{align*}
+	\E\left(S_t/S_0 1_{\{S_t /S_0<K /S_0\} }\right) = \E\left(e^X 1_{\{X< \ln\left(K/S_0\right) \} }\right).
+\end{align*}
+Now by standardization, let
+\begin{align*}
+	X = \left(\alpha-\delta-\frac{\sigma^2}{2}\right) t + \sigma \sqrt{t}\: Z,
+\end{align*}
+we see that
+\begin{align*}
+	\E\left(e^X 1_{\{X< \ln\left(K/S_0\right) \} }\right)
+	=\E\left(e^{\left(\alpha-\delta-\frac{\sigma^2}{2}\right) t + \sigma \sqrt{t}\:
+	Z}1_{\left\{Z<\frac{\ln(S_t /S_0)-\left(\alpha-\delta-\frac{\sigma^2}{2}\right) t}{\sigma \sqrt{t}}\right\} }\right).
+\end{align*}
+\end{myproof}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{myproof}[ (continued)]
+Now denote
+\begin{align*}
+	\ell := \frac{\ln(K/S_0)-\left(\alpha-\delta-\frac{\sigma^2}{2}\right) t}{\sigma \sqrt{t}}.
+\end{align*}
+The above computation shows that
+\begin{align*}
+	\E\left(e^X 1_{\left\{X< \ln\left(K/S_0\right) \right\} }\right)
+	=e^{\left(\alpha-\delta-\frac{\sigma^2}{2}\right) t}
+	\E\left(e^{\sigma \sqrt{t}\: Z}1_{\left\{Z<\ell\right\} }\right).
+\end{align*}
+Now we have
+\begin{align*}
+		\E\left(e^{\sigma \sqrt{t}\: Z}1_{\left\{Z<\ell\right\} }\right)
+    & =\int_{-\infty}^\ell \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2} + \sigma \sqrt{t} x} \ud x                                  \\
+    & =\int_{-\infty}^\ell \frac{1}{\sqrt{2\pi}}e^{-\frac{\left(x-\sigma \sqrt{t}\right)^2}{2} + \frac{1}{2}\sigma^2 t} \ud x \\
+    & =e^{\frac{1}{2}\sigma^2 t}\int_{-\infty}^{\ell -\sigma \sqrt{t}} \frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2} } \ud z         \\
+    & =e^{\frac{1}{2}\sigma^2 t} N(\ell -\sigma \sqrt{t})
+\end{align*}
+\end{myproof}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{myproof}[ (continued)]
+Now
+\begin{align*}
+	\ell-\sigma \sqrt{t} & = \frac{\ln(K/S_0)-\left(\alpha-\delta-\frac{\sigma^2}{2}\right) t}{\sigma \sqrt{t}} - \sigma\sqrt{t}     \\
+                       & = \frac{\ln(K/S_0)-\left(\alpha-\delta\textcolor{magenta}{+}\frac{\sigma^2}{2}\right) t}{\sigma \sqrt{t}} \\
+                       & = -d_1.
+\end{align*}
+Therefore,
+\begin{align*}
+		\E\left(e^{\sigma \sqrt{t}\: Z}1_{\left\{Z<\ell\right\} }\right) & =e^{\frac{1}{2}\sigma^2 t} N(-d_1),
+\end{align*}
+and
+\begin{align*}
+	\E\left(e^X 1_{\left\{X< \ln\left(K/S_0\right) \right\} }\right)
+	=e^{\left(\alpha-\delta-\frac{\sigma^2}{2}\right) t}e^{\frac{1}{2}\sigma^2 t} N(-d_1)
+	=e^{\left(\alpha-\delta\right) t} N(-d_1).
+\end{align*}
+Finally, plugging what we have obtained, we see that
+\begin{align*}
+		\E\left(S_t|S_t<K\right) & = S_0 e^{(\alpha-\delta)t} \frac{N\left(\textcolor{cyan}{-}d_1\right)}{N\left(\textcolor{cyan}{-}d_2\right)}.
+\end{align*}
+\myEnd
+\end{myproof}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+Now we are ready to derive the Black-Scholes formula:
+
+\begin{align*}
+	C(S_0,K,\sigma,r,t,\delta) & = e^{-rt}\E\left(\left[S_t-K\right]1_{\{S_t>K\}}\right)                                      \\
+                             & = e^{-rt}\E\left(\left[S_t-K\right]|S_t>K\right)\bbP(S_t>K)                                  \\
+                             & = e^{-rt}\E\left(S_t|S_t>K\right)\bbP(S_t>K)-e^{-rt}\E\left(K|S_t>K\right)\bbP(S_t>K)        \\
+                             & = e^{-rt}\E\left(S_t|S_t>K\right)\bbP(S_t>K)-e^{-rt}K \bbP(S_t>K)                            \\
+                             & = e^{-rt} S_0 e^{(\alpha-\delta)t}\frac{N(d_1)}{N(d_2)} \times N(d_2)-e^{-rt}K \times N(d_2) \\
+                             & = e^{-rt} S_0 e^{(\alpha-\delta)t} N(d_1)-e^{-rt}K N(d_2)                                    \\
+\end{align*}
+Finally, we need to require ``risk-neutrality", namely, $\alpha=r$, in order to see that
+\begin{align*}
+	\textcolor{magenta}{C(S_0,K,\sigma,r,t,\delta) = e^{-\delta t} S_0 N(d_1)-e^{-rt}K N(d_2)}.
+\end{align*}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+Similarly, one can derive the formula for put:
+\begin{align*}
+	\textcolor{cyan}{P(S_0,K,\sigma,r,t,\delta) =e^{-rt}K N(-d_2)-e^{-\delta t} S_0 N(-d_1)}.
+\end{align*}
+(Exercise)
+\end{frame}
+%-------------- end slide -------------------------------%}}}

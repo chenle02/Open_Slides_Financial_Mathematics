@@ -1,0 +1,29 @@
+\def\mySecNum{19.3}
+\mySection{\mySecNum~Simulating lognormal stock prices}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{align*}
+	S_T & = S_0 e^{\left(\alpha-\delta-\frac{1}{2}\sigma^2\right) T + \sigma \sqrt{T} Z}
+\end{align*}
+\mySeparateLine
+\begin{align*}
+	S_h    & = S_0 e^{\left(\alpha-\delta-\frac{1}{2}\sigma^2\right) h + \sigma \sqrt{h} Z_1}        \\
+	S_{2h} & = S_h e^{\left(\alpha-\delta-\frac{1}{2}\sigma^2\right) h + \sigma \sqrt{h} Z_2}        \\
+	\vdots & \qquad \qquad \vdots                                                                    \\
+	S_{nh} & = S_{(n-1)h} e^{\left(\alpha-\delta-\frac{1}{2}\sigma^2\right) h + \sigma \sqrt{h} Z_n} \\
+\end{align*}
+\begin{align*}
+	\Downarrow
+\end{align*}
+\begin{align*}
+	S_{nh} & = S_0 e^{\left(\alpha-\delta-\frac{1}{2}\sigma^2\right) h + \sigma \sqrt{h} \sum_{i=1}^{n} Z_i}
+	= S_0e^{\left(\alpha-\delta-\frac{1}{2}\sigma^2\right) h + \sigma \sqrt{T} \textcolor{magenta}{\left[\frac{1}{\sqrt{n}}\sum_{i=1}^{n} Z_i\right]}}
+\end{align*}
+\begin{center}
+	where
+\end{center}
+\begin{align*}
+	\textcolor{magenta}{\frac{1}{\sqrt{n}}\sum_{i=1}^{n} Z_i} \sim N\left(0,1\right)
+\end{align*}
+\end{frame}
+%-------------- end slide -------------------------------%}}}

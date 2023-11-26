@@ -1,0 +1,15 @@
+\begin{myexample}
+	Suppose that
+	\begin{center}
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{ccc}
+			Strike      & 50 & 59  & 65 \\
+			Put premium & 14 & 8.9 & 5  \\
+		\end{tabular}
+		\begin{enumerate}
+			\item What no-arbitrage property is violated?
+			\item What spread position would you use to effect arbitrage?
+			\item Demonstrate that the spread position is an arbitrage.
+		\end{enumerate}
+	\end{center}
+\end{myexample}

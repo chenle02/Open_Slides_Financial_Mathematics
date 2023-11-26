@@ -1,0 +1,56 @@
+\def\mySecNum{20.1}
+\mySection{\mySecNum~The Black-Scholes assumption about stock prices}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	The vast majority of technical option pricing discussions, including the original paper by Black
+	and Scholes, assume that the price of the underlying asset follows a process determined by
+	\bigskip
+
+	\begin{align}
+		\label{E:SDE}
+		dS(t) = (\alpha-\delta) dt+ \sigma d Z(t), \quad  S(0)=S_0.
+	\end{align}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{align*}
+	\boxed{dS(t) = (\alpha-\delta) dt+ \sigma d Z(t), \quad  S(0)=S_0}
+\end{align*}
+\bigskip
+\begin{itemize}
+	\item $S(t)$ is the \textcolor{cyan}{stock price}. $d S(t)$	is the instantaneous change in the
+		stock price. $S_0$ is the initial asset value.
+	\item $\alpha$ is the \textcolor{cyan}{continuously compound expected return} on the stock;
+	\item $\sigma$ is the \textcolor{cyan}{volatility}, i.e., the standard deviation of the instantaneous return;
+	\item $Z(t)$ is the \textcolor{cyan}{standard Brownian motion}.
+	\item $dZ(t)$ requires rigorous justification.
+\end{itemize}
+\bigskip
+\mySeparateLine
+\bigskip
+\begin{itemize}
+	\item Equation of this type is called \textcolor{magenta}{stochastic differential equation}.
+	\item Solution to this specific equation is the \textcolor{magenta}{geometric Brownian motion}.
+\end{itemize}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\begin{remark}
+		\label{R:lognormal}
+		We will see in this chapter that solution to this equation is lognormally distributed:
+		\begin{align*}
+			\ln(S(t)) \sim N\left(\ln(S_0)+ \left(\alpha-\delta-\frac{1}{2}\sigma^2\right)t, \: \sigma^2\:
+			t\right), \quad \text{for all $t>0$}.
+		\end{align*}
+	\end{remark}
+	\bigskip
+	\bigskip
+	\pause
+	\begin{remark}
+		 Note that Remark \myref{R:lognormal} is valid for all $t>0$. It works for the terminal time
+		 $t=T$. It can also help us solve path-dependent options.
+	\end{remark}
+\end{frame}
+%-------------- end slide -------------------------------%}}}

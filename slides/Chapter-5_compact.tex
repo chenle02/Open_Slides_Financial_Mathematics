@@ -1,0 +1,28 @@
+\documentclass[compress,trans,9pt]{beamer}
+%\documentclass[compress,9pt,usenames,dvipsnames]{beamer}
+% \usepackage[utf8]{inputenc}
+% \includeonlyframes{current}
+\input{Common}
+\input{Title}
+\begin{document}
+\begin{frame}[noframenumbering]
+  \titlepage
+\end{frame}
+\newcommand{\myChapter}{Chapter 5. Financial Forwards and Futures}
+\newcommand{\mySection}[1]{
+  \section{\S\: #1}
+  \begin{frame}{\myChapter}\tableofcontents\end{frame}
+  \begin{frame}{\myChapter}\tableofcontents[currentsection]\end{frame}
+  }
+\begin{frame}
+\begin{center}
+\huge
+\myChapter
+\end{center}
+\end{frame}
+\include{Section_5-1}
+\include{Section_5-2}
+\include{Section_5-3}
+\include{Section_5-4}
+\include{Section_5-5}
+\end{document}

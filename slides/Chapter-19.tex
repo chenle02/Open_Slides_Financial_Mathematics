@@ -1,0 +1,33 @@
+ \documentclass[9pt]{beamer}
+%\documentclass[compress,9pt,usenames,dvipsnames]{beamer}
+% \usepackage[utf8]{inputenc}
+% \includeonlyframes{current}
+\input{Common}
+\input{Title}
+\begin{document}
+\begin{frame}[noframenumbering]
+  \titlepage
+\end{frame}
+\newcommand{\myChapter}{Chapter 19. Monte Carlo Valuation}
+\newcommand{\mySection}[1]{
+  \section{\S\: #1}
+  \begin{frame}{\myChapter}\tableofcontents\end{frame}
+  \begin{frame}{\myChapter}\tableofcontents[currentsection]\end{frame}
+  }
+\begin{frame}
+\begin{center}
+\huge
+\myChapter
+\end{center}
+\end{frame}
+\include{Section_19-1}
+\include{Section_19-2}
+\include{Section_19-3}
+\include{Section_19-4}
+\include{Section_19-5}
+\include{Section_19-6}
+% \include{Section_19-7}
+% \include{Section_19-8}
+% \include{Section_19-9}
+% \include{Section_19-10}
+\end{document}

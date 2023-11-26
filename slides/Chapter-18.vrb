@@ -1,0 +1,14 @@
+\frametitle{Central Limit Theorem}
+	\begin{itemize}
+		\item[] Measurements lead to error. The error tends to be independent and is usually modeled by
+			zero mean normal random variables thanks to the central limit theorem (CLT).
+		\item[] CLT usually can be phrased under different conditions. Here is one example:
+	\end{itemize}
+\begin{mythm}
+	Suppose $ \{X_1,c\cots, X_n\} $ is a sequence of independent random variables having the same
+distribution (i.e., i.i.d.) with $\E(X_i)=\mu$ and  $\Var(X_i)=\sigma^2<\infty$. Then as  $n\to
+\infty$, then
+ \begin{align*}
+	 \frac{\sqrt{n}(\overline{X}_n-\mu)}{\sigma} \stackrel{\to}{d}
+\end{align*}
+\end{mythm}

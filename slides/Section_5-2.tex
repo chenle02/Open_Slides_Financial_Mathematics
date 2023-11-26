@@ -1,0 +1,133 @@
+\def\mySecNum{5.2}
+\mySection{\mySecNum~Prepaid forward contracts on stock}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	Three ways to determine the payment for the prepaid	forward contracts\\
+
+	(no dividend case)
+
+	\begin{itemize}
+		\item Pricing the prepaid forward by analogy
+		\item Pricing the prepaid forward by discounted present value
+		\item Pricing the prepaid forward by arbitrage
+	\end{itemize}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Pricing the prepaid forward by analogy}
+
+	In the absence of dividends, whether you receive physical possession today or at time $T$ is
+	irrelevant: In either case you own the stock, and at time $T$ it will be exactly as if you had
+	owned the stock the whole time. Hence,
+
+\begin{align*}
+	F_{0,T}^p = S_0
+\end{align*}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Pricing the prepaid forward by discounted present value}
+
+	Let $\alpha$ be the expected return on the stock.\\
+	\bigskip
+
+	Let $\E_0(S_T)$ be the expected stock price at time  $T$.\\
+
+	\bigskip
+
+	Hence,
+
+	\begin{align*}
+		F_{0,T}^p = \underbrace{\E_0(S_T)}_{= S_0 \times e^{\alpha T}} \times e^{-\alpha T} = S_0
+	\end{align*}
+
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Pricing the prepaid forward by arbitrage}
+
+	\begin{align*}
+		\text{Arbitrage} = \text{Free money}
+	\end{align*}
+
+	\begin{center}
+		The price of a derivative should be such that
+
+		\bigskip
+		\textcolor{magenta}{\bf no arbitrage is possible}.
+	\end{center}
+
+	\bigskip
+	\mySeparateLine
+	\bigskip
+
+	\begin{enumerate}
+		\item If $F_{0,T}^p>S_0$: find the arbitrage.
+			\bigskip
+		\item If $F_{0,T}^p<S_0$: find the arbitrage.
+			\bigskip
+		\item[] Hence, $F_{0,T}^p=S_0$.
+	\end{enumerate}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Pricing prepaid forwards with dividends \\ -- Discrete dividends}
+	Suppose a stock is expected to make dividend payments of $D_{t_i}$ at time $t_i$,  $i=1,\cdots,
+	n$. Then
+	\begin{align*}
+		F_{0,T}^P = S_0- \sum_{i=1}^n \text{PV}_{0,t_i}\left(D_{t_i}\right),
+	\end{align*}
+	where $\text{PV}_{0,t}(\cdot)$ is the present value at time zero of  a time $t_j$ payment.
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{myexample}
+	Suppose XYZ stock costs \$100 today and is expected to pay a \$1.25 quarterly dividend, with the
+	first coming 3 months from today and the last just prior to the delivery of the stock. Suppose the
+	annual continuously compounded risk-free rate is 10\%.  The quarterly continuously compounded rate
+	is therefore 2.5\%.\\
+	Find a 1-year prepaid forward contract for the stock would cost.
+\end{myexample}
+\pause
+\begin{mysol}
+\begin{align*}
+	F_{0,1}^T = \$100 - \sum_{i=1}^4 \$1.25 \times e^{-0.025 i} = \$93.30.
+\end{align*}
+\myEnd
+\end{mysol}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+	\frametitle{Pricing prepaid forwards with dividends \\ -- Continuous dividends}
+	Let $\delta$ be the compounded dividend yield. Then
+	\begin{align*}
+		F_{0,T}^P = S_0 e^{-\delta T}
+	\end{align*}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{myexample}
+ Suppose that the index is $\$125$ and the annualized daily compounded dividend yield is $3\%$. Find
+ the prepaid forward price at one year.
+\end{myexample}
+\pause
+\bigskip
+\begin{mysol}
+	% \begin{align*}
+	% 	\delta = \frac{0.03}{365} \times \$ 125 = \$0.01027.
+	% \end{align*}
+	% Hence,
+	\begin{align*}
+		F_{0,1}^p = \$125 e^{-0.03 \times 1} = \$121.306.
+	\end{align*}
+	\myEnd
+\end{mysol}
+\end{frame}
+%-------------- end slide -------------------------------%}}}

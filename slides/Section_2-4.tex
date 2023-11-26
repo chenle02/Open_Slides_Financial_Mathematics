@@ -1,0 +1,89 @@
+\def\mySecNum{2.4}
+\mySection{\mySecNum~Options are insurance}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile,t]
+\begin{myexample}
+  Homeowner's insurance is a put option:
+\begin{align*}
+	\text{Value of house} & = \$200,000 \\
+	\text{Deductible}     & = \$25,000  \\
+	\text{Premium}        & = \$15,000
+\end{align*}
+\end{myexample}
+\begin{center}
+	\includegraphics[scale=0.22]{figs/Figure-2-12.png}
+\end{center}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile]
+\begin{center}
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		The premium of the insurance \\
+		or                           \\
+		the value of the put option  \\
+		depends on\\
+
+		\begin{itemize}
+			\item Riskiness of the underlying asset
+			\item The amount of deductible.
+		\end{itemize}
+	\end{minipage}
+
+	\pause
+	\bigskip
+	\mySeparateLine
+	\bigskip
+
+	\begin{minipage}{0.65\textwidth}
+		\centering
+		Difference with options
+
+		\begin{itemize}
+			\item Put option pays off no matter why the index price declines.
+			\item Insurance pays off only if the house declines in value for for specific reasons.
+		\end{itemize}
+	\end{minipage}
+
+\end{center}
+\end{frame}
+%-------------- end slide -------------------------------%}}}
+%-------------- start slide -------------------------------%{{{ 1
+\begin{frame}[fragile]
+	\begin{center}
+
+		\begin{minipage}{0.5\textwidth}
+			\centering
+
+			A \textcolor{magenta}{put} option is \\
+			\alert{an insurance}                 \\
+
+			\begin{enumerate}
+				\item for an asset we already own.
+				\item for a long position.
+				\item against an decrease in value.
+			\end{enumerate}
+		\end{minipage}
+
+		\pause
+		\bigskip
+		\mySeparateLine
+		\bigskip
+
+		\begin{minipage}{0.5\textwidth}
+			\centering
+
+			A \textcolor{cyan}{call} option is \\
+			\alert{an insurance}               \\
+
+			\begin{enumerate}
+				\item for an asset we plan to own in the future.
+				\item for a short position.
+				\item against an increase in price.
+			\end{enumerate}
+		\end{minipage}
+	\end{center}
+
+\end{frame}
+%-------------- end slide -------------------------------%}}}

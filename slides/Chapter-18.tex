@@ -1,0 +1,30 @@
+ \documentclass[9pt]{beamer}
+%\documentclass[compress,9pt,usenames,dvipsnames]{beamer}
+% \usepackage[utf8]{inputenc}
+% \includeonlyframes{current}
+\input{Common}
+\input{Title}
+\begin{document}
+\begin{frame}[noframenumbering]
+  \titlepage
+\end{frame}
+\newcommand{\myChapter}{Chapter 18. The Lognormal Distribution}
+\newcommand{\mySection}[1]{
+  \section{\S\: #1}
+  \begin{frame}{\myChapter}\tableofcontents\end{frame}
+  \begin{frame}{\myChapter}\tableofcontents[currentsection]\end{frame}
+  }
+\begin{frame}
+\begin{center}
+\huge
+\myChapter
+\end{center}
+\end{frame}
+\include{Section_18-1}
+\include{Section_18-2}
+\include{Section_18-3}
+\include{Section_18-4}
+\include{Section_18-5}
+\end{document}
+% \include{Section_18-6}
+% \include{Section_18-7}

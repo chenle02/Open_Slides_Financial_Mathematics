@@ -1,0 +1,186 @@
+return 
+   {
+   [1] = 
+      {
+      Number = 1,
+      Name = 'Introduction to Derivatives',
+      Sections = 
+         {
+         [1] = 'What is a derivative?',
+         [2] = 'The role of financial markets',
+         [3] = 'The use of derivatives',
+         [4] = 'Buying and short-selling financial assets',
+         [5] = 'Problems',
+         },
+      },
+   [2] = 
+      {
+      Number = 2,
+      Name = 'An Introduction to Forwards and Options',
+      Sections = 
+         {
+         [1] = 'Forward contracts',
+         [2] = 'Call options',
+         [3] = 'Put options',
+         [4] = 'Summary of forward and option positions',
+         [5] = 'Problems',
+         },
+      },
+   [3] = 
+      {
+      Number = 3,
+      Name = 'Insurance, Collars, and Other Strategies',
+      Sections = 
+         {
+         [1] = 'Basic insurance strategies',
+         [2] = 'Put-call parity',
+         [3] = 'Spreads and collars',
+         [4] = 'Speculating on volatility',
+         [5] = 'Problems',
+         },
+      },
+   [4] = 
+      {
+      Number = 5,
+      Name = 'Financial Forwards and Futures',
+      Sections = 
+         {
+         [1] = 'Alternative ways to buy a stock',
+         [2] = 'Prepaid forward contracts on stock',
+         [3] = 'Forward contracts on stock',
+         [4] = 'Futures contracts',
+         [5] = 'Problems',
+         },
+      },
+   [5] = 
+      {
+      Number = 9,
+      Name = 'Parity and other option relationships',
+      Sections = 
+         {
+         [1] = 'Put-call parity',
+         [2] = 'Generalized parity and exchange options',
+         [3] = 'Comparing options with respect to style, maturity, and strike',
+         [4] = 'Problems',
+         },
+      },
+   [6] = 
+      {
+      Number = 10,
+      Name = 'Binomial Option Pricing: Basic Concepts',
+      Sections = 
+         {
+         [1] = 'A one-period Binomial tree',
+         [2] = 'Constructing a Binomial tree',
+         [3] = 'Two or more binomial periods',
+         [4] = 'Put options',
+         [5] = 'American options',
+         [6] = 'Options on other assets',
+         [7] = 'Problems',
+         },
+      },
+   [7] = 
+      {
+      Number = 11,
+      Name = 'Binomial Option Pricing: Selected Topics',
+      Sections = 
+         {
+         [1] = 'Understanding Early Exercise',
+         [2] = 'Understanding risk-neutral pricing',
+         [3] = 'The Binomial tree and lognormality',
+         [4] = 'Problems',
+         },
+      },
+   [8] = 
+      {
+      Number = 12,
+      Name = 'The Black-Scholes Formula',
+      Sections = 
+         {
+         [1] = 'Introduction to the Black-Scholes formula',
+         [2] = 'Applying the formula to other assets',
+         [3] = 'Option Greeks',
+         [4] = 'A. The standard normal distribution',
+         [5] = 'B. Formulas for option Greeks',
+         [6] = 'Problems',
+         },
+      },
+   [9] = 
+      {
+      Number = 13,
+      Name = 'Market-Making and Delta-Hedging',
+      Sections = 
+         {
+         [1] = 'What do market-makers do?',
+         [2] = 'Market-maker risk',
+         [3] = 'Delta-Hedging',
+         [4] = 'The mathematics of Delta-hedging',
+         [5] = 'The Black-Scholes analysis',
+         [6] = 'Market-Making as insurance',
+         [7] = 'Problems',
+         },
+      },
+   [10] = 
+      {
+      Number = 14,
+      Name = 'Exotic Options: I',
+      Sections = 
+         {
+         [1] = 'Introduction',
+         [2] = 'Asian options',
+         [3] = 'Barrier options',
+         [4] = 'Compound options',
+         [5] = 'Gap options',
+         [6] = 'Exchange options',
+         [7] = 'Problems',
+         },
+      },
+   [11] = 
+      {
+      Number = 18,
+      Name = 'The Lognormal Distribution',
+      Sections = 
+         {
+         [1] = 'The normal distribution',
+         [2] = 'The lognormal distribution',
+         [3] = 'A lognormal model of stock prices',
+         [4] = 'Lognormal probability calculations',
+         [5] = 'A. The expectation of a lognormal variable',
+         [6] = 'B. Constructing a normal probability',
+         [7] = 'Problems',
+         },
+      },
+   [12] = 
+      {
+      Number = 19,
+      Name = 'Monte Carlo Valuation',
+      Sections = 
+         {
+         [1] = 'Computing the option price as a discounted expected value',
+         [2] = 'Computing random numbers',
+         [3] = 'Simulating lognormal stock prices',
+         [4] = 'Monte Carlo valuation',
+         [5] = 'Efficient Monte Carlo valuation',
+         [6] = 'Valuation of American options',
+         [7] = 'The Poisson distribution',
+         [8] = 'Simulating jumps with the Poisson distribution',
+         [9] = 'Simulating correlated stock prices',
+         [10] = 'Problems',
+         },
+      },
+   [13] = 
+      {
+      Number = 20,
+      Name = 'Brownian Motion and Ito Lemma',
+      Sections = 
+         {
+         [1] = 'The Black-Scholes assumption about stock prices',
+         [2] = 'Brownian motion',
+         [3] = 'Geometric Brownian motion',
+         [4] = 'The Ito formula',
+         [5] = 'The Sharpe ratio',
+         [6] = 'Risk-neutral valuation',
+         [7] = 'Problems',
+         },
+      },
+   }

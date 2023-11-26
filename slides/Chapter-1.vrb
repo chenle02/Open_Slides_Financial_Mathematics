@@ -1,0 +1,17 @@
+\begin{myexample}
+		 Buy and sell 100 shares of XYZ with
+		 \begin{center}
+		 	 bid = \$49.75, offer = \$50, commission = \$15
+		 \end{center}
+	\begin{enumerate}
+		\item Buy:
+			\begin{align*}
+				(100 \times \$50) + \$15 = \$5,015.
+			\end{align*}
+		\item Sell:
+			\begin{align*}
+				(100 \times \$49.75) - \ $15 = \$4,960.
+			\end{align*}
+		\item Transaction cost: \$5015 – \$4,960 = \$55
+	\end{enumerate}
+	\end{myexample}
