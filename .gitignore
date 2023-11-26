@@ -1,0 +1,11 @@
+*.toc
+*.out
+*.aux
+*.bbl
+*.log
+*.smn
+*.nav
+*.blg
+*.synctex.gz
+
+slides/codes/Python-Binomial-Stock-Option-Pricing
