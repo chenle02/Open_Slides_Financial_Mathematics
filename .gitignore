@@ -6,6 +6,8 @@
 *.smn
 *.nav
 *.blg
+*.snm
+*.vrb
 *.synctex.gz
 
 slides/codes/Python-Binomial-Stock-Option-Pricing
