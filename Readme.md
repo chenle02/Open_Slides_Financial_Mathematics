@@ -1,10 +1,13 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.????????.svg)](https://doi.org/10.5281/zenodo.????????)
+![Cover](./media/Cover.png)
+
 # Financial Mathematics: Open Slides
 
-In this repo, we share all the source LaTex codes for the Beamer slides that the author has developed for the Course [Math5870/6870 Financial Mathematics at Auburn University](http://webhome.auburn.edu/~lzc0090/teaching/2021_Fall_Math5870/), Fall 2021.
+In this repo, we share all the source LaTex codes for the Beamer slides that the author has developed for the Course _Math5870/6870 Financial Mathematics_ at Auburn University, Fall 2021.
 
+  * The course page is [here](http://webhome.auburn.edu/~lzc0090/teaching/2021_Fall_Math5870/).
 
-If you find this repository useful and , please cite it using the following BibTeX entry:
+If you find this repository useful and want to reference to it, kindly cite it using the following BibTeX entry: 
 
 * Le Chen (2023) “Financial Mathematics: Open Slides”. GitHub & Zenodo. https://doi.org/10.5281/zenodo.????????
 
