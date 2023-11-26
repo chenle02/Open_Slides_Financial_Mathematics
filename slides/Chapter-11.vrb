@@ -1,8 +1,0 @@
-\frametitle{Risk-Neutral Probability}
-
-	Recall the binomial option pricing formula:
-
-	\begin{align*}
-		C = \Delta S + B = e^{-rh} \left[ p^* C_u _(1-p^*) C_d\right]
-	\end{align*}
-
