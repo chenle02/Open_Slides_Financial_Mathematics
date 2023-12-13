@@ -14,4 +14,4 @@ then
 fi
 
 
-pdftoppm -png -f 1 -r 600 -singlefile ../slides/Chapter-10_full.pdf Cover
+pdftoppm -png -f 1 -r 600 -singlefile ../slides/Chapter-10_full.pdf Open_slides_financial_math

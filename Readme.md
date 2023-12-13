@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10207028.svg)](https://doi.org/10.5281/zenodo.10207028)
-![Cover](./media/Cover.png)
+![Cover](./media/Open_slides_financial_math.png)
 
 # Financial Mathematics: Open Slides
 
